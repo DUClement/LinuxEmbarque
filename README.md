@@ -33,6 +33,7 @@ Les programmes suivants :
 - utilisation d’un timer </br>
 sont assemblés en un seul programme *cf* _TP2_/_proc_/_proc.c_ par conséquent son programme est *cf* _TP2_/_proc_/_proc.ko_
 ![procFile](Screenshots/procFile.JPG)
+## Récupération de la configuration actuelle du noyau
 ```
 export CROSS_COMPILE=<chemin_arm-linux-gnueabihf->
 export ARCH=arm
