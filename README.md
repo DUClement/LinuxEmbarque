@@ -18,7 +18,7 @@ Cette commande, ```arm-linux-gnueabihf-gcc hello.c -o hello.o```, permet de fair
 ./hello.c ne s'exécute pas car il s'agit d'un fichier binaire que la VM ne peut pas exécuter, il faut passer par la carte VEEK.
 ## Accès au matériel (echo) et chenillard
 
-```echo "1" > /sys/class/leds/fpga_led1/brightness``` allume la led à la position 1 simplement
+```echo "1" > /sys/class/leds/fpga_led1/brightness``` allume la led à la position 1 simplement.
 
 Nous allons mettre en place un chenillard en s'inspirant de la ligne de commande d'au dessus *cf* _TP1_/_chenillard.c_ et son exécutable. </br>
 Nous ouvrons les fichiers ```/sys/class/leds/fpga_ledx/brightness``` où ```x``` représente le numéro de led et est remplacé puis nous écrivons dans la valeur de la led afin de l'allumer et l'éteindre.
@@ -40,16 +40,17 @@ export ARCH=arm
 make prepare
 make scripts
 ```
-```export``` permet de définir des variables d'environnement qui peuvent être utilisées par les processus en cours d'exécution
-Le <chemin_arm-linux-gnueabihf> est le chemin noté plus haut sans le gcc final. 
+```export``` permet de définir des variables d'environnement qui peuvent être utilisées par les processus en cours d'exécution. </br>
+Le <chemin_arm-linux-gnueabihf> est le chemin noté plus haut sans le gcc final. </br>
 Par exemple : /usr/bin/arm-linux-gnueabihf-
-— Pourquoi le chemin fini par un tiret "-" ? Il n'est pas nécessaire d'ajouter le gcc puisqu'il sera complété lorsque ```make``` sera appelé après les exports.
+— Pourquoi le chemin fini par un tiret "-" ? </br>
+Il n'est pas nécessaire d'ajouter le gcc puisqu'il sera complété lorsque ```make``` sera appelé après les exports.
 ## Chargez les modules dans la carte VEEK
 Pour charger les modules suivants dans la VEEK
 — utilisation de paramètres au chargement du module
 — création d’un entrée dans /proc
 — utilisation d’un timer
-il faut ajouter la ligne ```CFLAGS_MODULE=-fno-pic``` dans le Makefile et aussi modifier le chemin du noyau.
+il faut ajouter la ligne ```CFLAGS_MODULE=-fno-pic``` dans le Makefile et aussi modifier le chemin du noyau. </br>
 Il faut également sortir du dossier partagé ```~/src``` car le make ne compile pas proprement lorsque ce dossier est partagé avec Windows.
 # TP3 - Device tree
 ## Changement du device tree (ensea)
