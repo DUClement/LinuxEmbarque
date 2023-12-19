@@ -1,6 +1,3 @@
-Clément DU
-Laksan THIRUKUMARAN
-
 # TP1 - Prise en main
 ## Connexion au système
 Une fois connecté au SoC et après avoir tapé ces commandes suivantes : 
@@ -37,6 +34,7 @@ Les programmes suivants :
 — création d’un entrée dans /proc
 — utilisation d’un timer
 sont assemblés en un seul programme *cf* _TP2_/_proc_/_proc.c_ par conséquent son programme est *cf* _TP2_/_proc_/_proc.ko_
+![procFile](Screenshots/procFile.JPG)
 ```
 export CROSS_COMPILE=<chemin_arm-linux-gnueabihf->
 export ARCH=arm
@@ -44,3 +42,27 @@ make prepare
 make scripts
 ```
 ```export``` permet de définir des variables d'environnement qui peuvent être utilisées par les processus en cours d'exécution
+Le <chemin_arm-linux-gnueabihf> est le chemin noté plus haut sans le gcc final. 
+Par exemple : /usr/bin/arm-linux-gnueabihf-
+— Pourquoi le chemin fini par un tiret "-" ? Il n'est pas nécessaire d'ajouter le gcc puisqu'il sera complété lorsque ```make``` sera appelé après les exports.
+## Chargez les modules dans la carte VEEK
+Pour charger les modules suivants dans la VEEK
+— utilisation de paramètres au chargement du module
+— création d’un entrée dans /proc
+— utilisation d’un timer
+il faut ajouter la ligne ```CFLAGS_MODULE=-fno-pic``` dans le Makefile et aussi modifier le chemin du noyau.
+Il faut également sortir du dossier partagé ```~/src``` car le make ne compile pas proprement lorsque ce dossier est partagé avec Windows.
+# TP3 - Device tree
+## Changement du device tree (ensea)
+![device-tree](Screenshots/device-tree.JPG)
+## Module accedant au LED via /dev
+Les fonctions :
+- probe est appelée pour réserver de la mémoire, pour créer une structure stockant les infos (registres), pour allumer les leds et pour initialiser les misc device.
+- read est appelée pour lire les valeurs des leds
+- write est appelée pour mettre à jour les valeurs des leds
+- remove est appelée lorsqu'un module est déchargé ou pour enlever le drive lorsque le périphérique n'est plus présent.
+*cf* _TP3_/_gpio_leds.c_
+
+#
+Clément DU </br>
+Laksan THIRUKUMARAN
