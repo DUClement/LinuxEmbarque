@@ -16,6 +16,7 @@ Nous passons d'un espace de 3 GO à 15 GO disponibles.
 Cette commande, ```arm-linux-gnueabihf-gcc hello.c -o hello.o```, permet de faire de la cross-compilation.
 
 ./hello.c ne s'exécute pas car il s'agit d'un fichier binaire que la VM ne peut pas exécuter, il faut passer par la carte VEEK.
+![binary](Screenshots/binary.JPG)
 ## Accès au matériel (echo) et chenillard
 
 ```echo "1" > /sys/class/leds/fpga_led1/brightness``` allume la led à la position 1 simplement.
