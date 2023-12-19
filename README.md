@@ -30,7 +30,7 @@ Nous ouvrons les fichiers ```/sys/class/leds/fpga_ledx/brightness``` où ```x```
 Les programmes suivants :
 - utilisation de paramètres au chargement du module
 - création d’un entrée dans /proc
-- utilisation d’un timer
+- utilisation d’un timer </br>
 sont assemblés en un seul programme *cf* _TP2_/_proc_/_proc.c_ par conséquent son programme est *cf* _TP2_/_proc_/_proc.ko_
 ![procFile](Screenshots/procFile.JPG)
 ```
