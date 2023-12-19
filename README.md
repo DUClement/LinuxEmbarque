@@ -20,8 +20,7 @@ Cette commande, ```arm-linux-gnueabihf-gcc hello.c -o hello.o```, permet de fair
 
 ```echo "1" > /sys/class/leds/fpga_led1/brightness``` allume la led à la position 1 simplement
 
-Nous allons mettre en place un chenillard en s'inspirant de la ligne de commande d'au dessus.
-**cf** _TP1_/_chenillard.c_ et son exécutable.
+Nous allons mettre en place un chenillard en s'inspirant de la ligne de commande d'au dessus **cf** _TP1_/_chenillard.c_ et son exécutable.
 Nous ouvrons les fichiers ```/sys/class/leds/fpga_ledx/brightness``` où ```x``` représente le numéro de led et est remplacé puis nous écrivons dans la valeur de la led afin de l'allumer et l'éteindre.
 
 # TP2 - Modules kernel
