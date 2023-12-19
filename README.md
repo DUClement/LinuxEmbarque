@@ -41,8 +41,8 @@ make prepare
 make scripts
 ```
 ```export``` permet de définir des variables d'environnement qui peuvent être utilisées par les processus en cours d'exécution. </br>
-Le <chemin_arm-linux-gnueabihf> est le chemin noté plus haut sans le gcc final. </br>
-Par exemple : /usr/bin/arm-linux-gnueabihf-
+Le ```<chemin_arm-linux-gnueabihf>``` est le chemin noté plus haut sans le gcc final. </br>
+Par exemple : ```/usr/bin/arm-linux-gnueabihf-``` </br>
 — Pourquoi le chemin fini par un tiret "-" ? </br>
 Il n'est pas nécessaire d'ajouter le gcc puisqu'il sera complété lorsque ```make``` sera appelé après les exports.
 ## Chargez les modules dans la carte VEEK
