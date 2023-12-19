@@ -13,7 +13,7 @@ Nous passons d'un espace de 3 GO à 15 GO disponibles.
 - /proc/device-tree/sopc@0
 ## Compilation croisée
 
-Cette commande,```arm-linux-gnueabihf-gcc hello.c -o hello.o```, permet de faire de la cross-compilation.
+Cette commande, ```arm-linux-gnueabihf-gcc hello.c -o hello.o```, permet de faire de la cross-compilation.
 
 ./hello.c ne s'exécute pas car il s'agit d'un fichier binaire que la VM ne peut pas exécuter, il faut passer par la carte VEEK.
 ## Accès au matériel (echo) et chenillard
