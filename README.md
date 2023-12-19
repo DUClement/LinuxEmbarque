@@ -60,7 +60,7 @@ Les fonctions :
 - probe est appelée pour réserver de la mémoire, pour créer une structure stockant les infos (registres), pour allumer les leds et pour initialiser les misc device.
 - read est appelée pour lire les valeurs des leds
 - write est appelée pour mettre à jour les valeurs des leds
-- remove est appelée lorsqu'un module est déchargé ou pour enlever le drive lorsque le périphérique n'est plus présent.
+- remove est appelée lorsqu'un module est déchargé ou pour enlever le drive lorsque le périphérique n'est plus présent. </br>
 *cf* _TP3_/_gpio_leds.c_
 
 #
