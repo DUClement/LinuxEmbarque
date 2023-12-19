@@ -8,9 +8,9 @@ Une fois connecté au SoC et après avoir tapé ces commandes suivantes :
 Nous passons d'un espace de 3 GO à 15 GO disponibles.
 ## Exploration des dossiers /sys/class et /proc
 - /sys/class/leds/fpga_ledX/ donne accès aux contrôles des LED de la FPGA
-— /proc/ioport fournit des informations sur les adresses entrées/sorties des péripéhriques
-— /proc/iomem contient les informations des adresses mémoires
-— /proc/device-tree/sopc@0
+- /proc/ioport fournit des informations sur les adresses entrées/sorties des péripéhriques
+- /proc/iomem contient les informations des adresses mémoires
+- /proc/device-tree/sopc@0
 ## Compilation croisée
 
 Cette commande,```arm-linux-gnueabihf-gcc hello.c -o hello.o```, permet de faire de la cross-compilation.
