@@ -43,13 +43,13 @@ make scripts
 ```export``` permet de définir des variables d'environnement qui peuvent être utilisées par les processus en cours d'exécution. </br>
 Le ```<chemin_arm-linux-gnueabihf>``` est le chemin noté plus haut sans le gcc final. </br>
 Par exemple : ```/usr/bin/arm-linux-gnueabihf-``` </br>
-— Pourquoi le chemin fini par un tiret "-" ? </br>
+- Pourquoi le chemin fini par un tiret "-" ? </br>
 Il n'est pas nécessaire d'ajouter le gcc puisqu'il sera complété lorsque ```make``` sera appelé après les exports.
 ## Chargez les modules dans la carte VEEK
 Pour charger les modules suivants dans la VEEK
 - utilisation de paramètres au chargement du module
 - création d’un entrée dans /proc
-- utilisation d’un timer
+- utilisation d’un timer </br>
 il faut ajouter la ligne ```CFLAGS_MODULE=-fno-pic``` dans le Makefile et aussi modifier le chemin du noyau. </br>
 Il faut également sortir du dossier partagé ```~/src``` car le make ne compile pas proprement lorsque ce dossier est partagé avec Windows.
 # TP3 - Device tree
